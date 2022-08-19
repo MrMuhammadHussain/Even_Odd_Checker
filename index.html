@@ -5,15 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Even & ODD</title>
+    <style>
+
+        body{
+            overflow: hidden;
+            /* width: 100%; */
+            /* height: 100%; */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .container{
+            /* width: 100%; */
+            /* height: 100%; */
+            /* overflow: hidden; */
+            display: flex;
+            /* border: 05px solid gray; */
+            /* border-radius: 10px; */
+            /* height: 200%; */
+            /* width: 50%; */
+            /* align-content: center; */
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+            /* justify-items: center; */
+            /* margin-left: 50%; */
+            /* align-content: center; */
+           /* position: relative; */
+       
+      
+        }
+        .sub{
+            /* position: absolute; */
+            /* top: 50%; */
+            border: 05px solid gray;
+            border-radius: 10px;
+            /* width: 120%; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 15%; */
+            /* margin-bottom: 50%; */
+            /* padding: 1%; */
+            width: 30vh;
+        }
+        .sub:hover{
+            border: 04px solid lightblue;
+            box-shadow: 4px 5px 20px  lightblue ;
+            /* padding: 5%; */
+            margin-bottom: 5%;
+            width: 35vh;
+        }
+
+        
+    </style>
 </head>
 <body>
-    <form onsubmit="EvenOdd(); return false">
-
-        <input id="check" type="number">
-        <button type="submit">Check</button>
-
-    </form>
-    <h3 id="result"></h3>
+    <div class="container">
+        <div class="sub">
+            
+        <h3>Even & Odd Checker</h3>
+        <!-- <form oninput="return false"> -->
+            <input oninput="EvenOdd(); return false" id="check" type="number">
+            <!-- <button type="submit">Check</button> -->
+            <!-- </form> -->
+            <h3 id="result">Result</h3>
+        </div>
+        
+    </div>
     <script>
 function EvenOdd(){
     let check = +document.querySelector("#check").value
