@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even & ODD</title>
+</head>
+<body>
+    <form onsubmit="EvenOdd(); return false">
+
+        <input id="check" type="number">
+        <button type="submit">Check</button>
+
+    </form>
+    <h3 id="result"></h3>
+    <script>
+function EvenOdd(){
+    let check = +document.querySelector("#check").value
+    if (check % 2){
+        document.querySelector("#result").innerHTML= check + ' is ODD'
+    }else{
+
+        document.querySelector("#result").innerHTML= check +' is Even'
+
+    }
+
+
+}
+
+
+    </script>
+
+</body>
+</html>
