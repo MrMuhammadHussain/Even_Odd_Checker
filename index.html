@@ -15,6 +15,7 @@
             display: flex;
             justify-content: center;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            /* background-color: rgb(230, 230, 230); */
 
         }
         .container{
@@ -34,13 +35,15 @@
             /* margin-left: 50%; */
             /* align-content: center; */
            /* position: relative; */
+           
        
       
         }
         .sub{
+            background-color: rgb(205, 231, 241);
             /* position: absolute; */
             /* top: 50%; */
-            border: 05px solid gray;
+            border: 2px solid rgb(133, 216, 208);
             border-radius: 10px;
             /* width: 120%; */
             display: flex;
@@ -51,13 +54,23 @@
             /* margin-bottom: 50%; */
             /* padding: 1%; */
             width: 30vh;
+            transition: border 0.3s ease-in-out;
+            transition: margin-bottom 0.3s ease-in-out;
         }
         .sub:hover{
-            border: 04px solid lightblue;
+            border: 2.5px solid lightblue;
             box-shadow: 4px 5px 20px  lightblue ;
             /* padding: 5%; */
-            margin-bottom: 5%;
-            width: 35vh;
+            margin-bottom: 7%;
+            width: 30vh;
+            
+        }
+        input{
+            border: 2px solid rgb(122, 172, 196);
+            border-radius: 5px;
+            outline: none;
+
+
         }
 
         
@@ -80,12 +93,17 @@
 function EvenOdd(){
     let check = +document.querySelector("#check").value
     if (check % 2){
-        document.querySelector("#result").innerHTML= check + ' is ODD'
+        document.querySelector("#result").innerHTML= check + ' is ODD'//,style.backgroundColor="#00FF00"
+        let color = document.querySelector("#result")
+        color.style.color="rgb(230, 90, 100)"
     }else{
 
         document.querySelector("#result").innerHTML= check +' is Even'
+        let ccolor = document.querySelector("#result")
+        ccolor.style.color="red"
 
     }
+    
 
 
 }
