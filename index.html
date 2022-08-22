@@ -65,7 +65,11 @@
         function EvenOdd() {
             let check = document.querySelector("#check").value
             let result = document.querySelector("#result")
-            if (+check % 2) {
+            if(check===""){
+                result.className="simple"
+                result.innerHTML="Result"
+                document.title ="Even & ODD"
+            }else if (+check % 2) {
                 document.title = check + ' is ODD'
                 result.innerHTML = check + ' is ODD'
                 result.className = 'odd'
@@ -73,11 +77,6 @@
                 document.title = check + ' is Even'
                 result.innerHTML = check + ' is Even'
                 result.className = 'even'
-            }
-            if(check===""){
-                result.className="simple"
-                result.innerHTML="Result"
-                document.title ="Even & ODD"
             }
         }
     </script>
