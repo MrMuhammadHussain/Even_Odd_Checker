@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Even & ODD</title>
+    <title id="Tresult">Even & ODD</title>
     <style>
 
         body{
@@ -96,11 +96,13 @@ function EvenOdd(){
         document.querySelector("#result").innerHTML= check + ' is ODD'//,style.backgroundColor="#00FF00"
         let color = document.querySelector("#result")
         color.style.color="rgb(230, 90, 100)"
+        document.querySelector("#Tresult").innerHTML= check + ' is ODD'
     }else{
 
         document.querySelector("#result").innerHTML= check +' is Even'
         let ccolor = document.querySelector("#result")
         ccolor.style.color="red"
+        document.querySelector("#Tresult").innerHTML= check + ' is Even'
 
     }
     
