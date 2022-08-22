@@ -4,114 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="Tresult">Even & ODD</title>
+    <title>Even & ODD</title>
     <style>
-
-        body{
+        body {
             overflow: hidden;
-            /* width: 100%; */
-            /* height: 100%; */
             min-height: 100vh;
             display: flex;
             justify-content: center;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            /* background-color: rgb(230, 230, 230); */
-
         }
-        .container{
-            /* width: 100%; */
-            /* height: 100%; */
-            /* overflow: hidden; */
+        .container {
             display: flex;
-            /* border: 05px solid gray; */
-            /* border-radius: 10px; */
-            /* height: 200%; */
-            /* width: 50%; */
-            /* align-content: center; */
             justify-content: center;
             align-items: center;
-            /* flex-direction: column; */
-            /* justify-items: center; */
-            /* margin-left: 50%; */
-            /* align-content: center; */
-           /* position: relative; */
-           
-       
-      
         }
-        .sub{
+        .sub {
             background-color: rgb(205, 231, 241);
-            /* position: absolute; */
-            /* top: 50%; */
             border: 2px solid rgb(133, 216, 208);
             border-radius: 10px;
-            /* width: 120%; */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* margin-top: 15%; */
-            /* margin-bottom: 50%; */
-            /* padding: 1%; */
             width: 30vh;
             transition: border 0.3s ease-in-out;
             transition: margin-bottom 0.3s ease-in-out;
         }
-        .sub:hover{
+        .sub:hover {
             border: 2.5px solid lightblue;
-            box-shadow: 4px 5px 20px  lightblue ;
-            /* padding: 5%; */
+            box-shadow: 4px 5px 20px lightblue;
             margin-bottom: 7%;
             width: 30vh;
-            
         }
-        input{
+        input {
             border: 2px solid rgb(122, 172, 196);
             border-radius: 5px;
             outline: none;
-
-
         }
-
-        
+        .even {
+            color: red;
+        }
+        .odd {
+            color: green;
+        }
+        .simple {
+            color: black;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="sub">
-            
-        <h3>Even & Odd Checker</h3>
-        <!-- <form oninput="return false"> -->
+            <h3>Even & Odd Checker</h3>
             <input oninput="EvenOdd(); return false" id="check" type="number">
-            <!-- <button type="submit">Check</button> -->
-            <!-- </form> -->
-            <h3 id="result">Result</h3>
+            <h3 id="result" class="simple">Result</h3>
         </div>
-        
     </div>
     <script>
-function EvenOdd(){
-    let check = +document.querySelector("#check").value
-    if (check % 2){
-        document.querySelector("#result").innerHTML= check + ' is ODD'//,style.backgroundColor="#00FF00"
-        let color = document.querySelector("#result")
-        color.style.color="rgb(230, 90, 100)"
-        document.querySelector("#Tresult").innerHTML= check + ' is ODD'
-    }else{
-
-        document.querySelector("#result").innerHTML= check +' is Even'
-        let ccolor = document.querySelector("#result")
-        ccolor.style.color="red"
-        document.querySelector("#Tresult").innerHTML= check + ' is Even'
-
-    }
-    
-
-
-}
-
-
+        function EvenOdd() {
+            let check = +document.querySelector("#check").value
+            let result = document.querySelector("#result")
+            if (check % 2) {
+                document.title = check + ' is ODD'
+                result.innerHTML = check + ' is ODD'
+                result.className = 'odd'
+            } else {
+                document.title = check + ' is Even'
+                result.innerHTML = check + ' is Even'
+                result.className = 'even'
+            }
+        }
     </script>
-
 </body>
+
 </html>
